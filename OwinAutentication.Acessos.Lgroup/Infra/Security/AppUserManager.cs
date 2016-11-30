@@ -14,8 +14,22 @@ namespace OwinAutentication.Acessos.Lgroup.Infra.Security
         UserManager<Usuario, int>
     {
         public AppUserManager() 
-            : base(new UserStore<Usuario>(new AcessosContext()))
+            : base(new UsuarioRepository())
         {
+            //PARA VALIDAR O USUARIO VAMOS USAR O SEGUINTE ITEM
+            this.PasswordValidator = new PasswordValidator()
+            {
+                RequireDigit = true,
+                RequiredLength = 8,
+                RequireLowercase = true,
+                RequireNonLetterOrDigit = true,
+                RequireUppercase = true
+            };
+
+
+
+            this.PasswordHasher = null;
+
         }
     }
 }

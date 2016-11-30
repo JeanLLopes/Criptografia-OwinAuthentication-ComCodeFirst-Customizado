@@ -88,6 +88,7 @@
     <Compile Include="DomainModel\Usuario.cs" />
     <Compile Include="Infra\Data\AcessosContext.cs" />
     <Compile Include="Infra\Data\UsuarioRepository.cs" />
+    <Compile Include="Infra\Helpers\CustomPasswordHash.cs" />
     <Compile Include="Infra\Helpers\HashHelper.cs" />
     <Compile Include="Infra\Security\AppSignInManager.cs" />
     <Compile Include="Infra\Security\AppUserManager.cs" />
