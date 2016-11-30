@@ -2,6 +2,7 @@
 using OwinAutentication.Acessos.Lgroup.DomainModel;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -75,14 +76,16 @@ namespace OwinAutentication.Acessos.Lgroup.Infra.Data
             });
         }
 
-        public Task SetPasswordHashAsync(Usuario user, string passwordHash)
+        public  Task SetPasswordHashAsync(Usuario user, string passwordHash)
         {
-            throw new NotImplementedException();
+            user.HashPassword = passwordHash;
+            return Task.FromResult<object>(null);
         }
 
-        public Task UpdateAsync(Usuario user)
+        public async Task UpdateAsync(Usuario user)
         {
-            throw new NotImplementedException();
+            _acessosContext.Entry(user).State = EntityState.Modified;
+            await _acessosContext.SaveChangesAsync();
         }
     }
 }
