@@ -23,43 +23,56 @@ namespace OwinAutentication.Acessos.Lgroup.Infra.Data
         {
             get
             {
-                throw new NotImplementedException();
+                //PARA RETORNAR ALGO NO MINIMO TEMOS QUE DAR UM TOLIST
+                //NESTE CASO VAMOS USAR O USER ASQUERYABLE
+                return _acessosContext.Usuarios.AsQueryable();
             }
         }
 
-        public Task CreateAsync(Usuario user)
+        public async Task CreateAsync(Usuario user)
         {
-            throw new NotImplementedException();
+            _acessosContext.Usuarios.Add(user);
+            await _acessosContext.SaveChangesAsync();
         }
 
-        public Task DeleteAsync(Usuario user)
+        public async Task DeleteAsync(Usuario user)
         {
-            throw new NotImplementedException();
+            _acessosContext.Usuarios.Remove(user);
+            await _acessosContext.SaveChangesAsync();
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _acessosContext.Dispose();
         }
 
         public Task<Usuario> FindByIdAsync(int userId)
         {
-            throw new NotImplementedException();
+            return _acessosContext.Usuarios.FindAsync(userId);
         }
 
-        public Task<Usuario> FindByNameAsync(string userName)
+        public async Task<Usuario> FindByNameAsync(string userName)
         {
-            throw new NotImplementedException();
+            return await Task.Run(() =>
+            {
+                return _acessosContext.Usuarios.Single(x => x.UserName.Equals(userName));
+            });
         }
 
-        public Task<string> GetPasswordHashAsync(Usuario user)
+        public async Task<string> GetPasswordHashAsync(Usuario user)
         {
-            throw new NotImplementedException();
+            return await Task.Run(() =>
+            {
+                return user.HashPassword;
+            });
         }
 
-        public Task<bool> HasPasswordAsync(Usuario user)
+        public async Task<bool> HasPasswordAsync(Usuario user)
         {
-            throw new NotImplementedException();
+            return await Task.Run(() =>
+            {
+                return !string.IsNullOrWhiteSpace(user.HashPassword);
+            });
         }
 
         public Task SetPasswordHashAsync(Usuario user, string passwordHash)
