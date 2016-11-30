@@ -8,8 +8,25 @@ using System.Threading.Tasks;
 
 namespace OwinAutentication.Acessos.Lgroup.Infra.Data
 {
-    public class UsuarioRepository : IUserStore<Usuario, int>
+    public class UsuarioRepository : IUserPasswordStore<Usuario, int>, IQueryableUserStore<Usuario,int>
     {
+        private AcessosContext _acessosContext;
+
+        public UsuarioRepository()
+        {
+
+        }
+
+
+
+        public IQueryable<Usuario> Users
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
+
         public Task CreateAsync(Usuario user)
         {
             throw new NotImplementedException();
@@ -31,6 +48,21 @@ namespace OwinAutentication.Acessos.Lgroup.Infra.Data
         }
 
         public Task<Usuario> FindByNameAsync(string userName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<string> GetPasswordHashAsync(Usuario user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> HasPasswordAsync(Usuario user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task SetPasswordHashAsync(Usuario user, string passwordHash)
         {
             throw new NotImplementedException();
         }
