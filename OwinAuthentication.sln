@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinAuthentication", "OwinAuthentication\OwinAuthentication.csproj", "{97ABFDD8-8B86-4006-9CF8-E09AD087D733}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. UI", "1. UI", "{EC3B9C5F-C842-42C2-A214-D4ADFD382389}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Domains", "2. Domains", "{C7F195AA-3A56-4C32-9ABA-08B8AFFD0B4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinAutentication.Acessos.Lgroup", "OwinAutentication.Acessos.Lgroup\OwinAutentication.Acessos.Lgroup.csproj", "{6C8C59BD-144B-480A-A147-23705489BF4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97ABFDD8-8B86-4006-9CF8-E09AD087D733}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97ABFDD8-8B86-4006-9CF8-E09AD087D733}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97ABFDD8-8B86-4006-9CF8-E09AD087D733}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97ABFDD8-8B86-4006-9CF8-E09AD087D733}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C8C59BD-144B-480A-A147-23705489BF4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C8C59BD-144B-480A-A147-23705489BF4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C8C59BD-144B-480A-A147-23705489BF4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C8C59BD-144B-480A-A147-23705489BF4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{97ABFDD8-8B86-4006-9CF8-E09AD087D733} = {EC3B9C5F-C842-42C2-A214-D4ADFD382389}
+		{6C8C59BD-144B-480A-A147-23705489BF4D} = {C7F195AA-3A56-4C32-9ABA-08B8AFFD0B4D}
+	EndGlobalSection
+EndGlobal
