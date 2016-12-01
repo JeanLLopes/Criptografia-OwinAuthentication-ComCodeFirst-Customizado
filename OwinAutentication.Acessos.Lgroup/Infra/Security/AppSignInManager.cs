@@ -12,7 +12,7 @@ using Microsoft.AspNet.Identity;
 namespace OwinAutentication.Acessos.Lgroup.Infra.Security
 {
     public class AppSignInManager
-        : SignInManager<Usuario, string>
+        : SignInManager<Usuario, int>
     {
         //Precisamos pegar os objetos no banco de dados
         //e inseri-los no objeto de autenticação do Owin

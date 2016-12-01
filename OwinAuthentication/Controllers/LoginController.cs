@@ -24,7 +24,7 @@ namespace OwinAuthentication.Controllers
     public class LoginController : Controller
     {
         IAuthenticationManager _authenticationManager;
-        SignInManager<Usuario, string> _signInManager;
+        SignInManager<Usuario, int> _signInManager;
 
         public LoginController()
         {

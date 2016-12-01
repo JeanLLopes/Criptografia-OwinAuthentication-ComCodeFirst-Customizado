@@ -64,7 +64,7 @@ namespace OwinAutentication.Acessos.Lgroup.Infra.Data
         {
             return await Task.Run(() =>
             {
-                return user.HashPassword;
+                return user.PasswordHash;
             });
         }
 
@@ -72,13 +72,13 @@ namespace OwinAutentication.Acessos.Lgroup.Infra.Data
         {
             return await Task.Run(() =>
             {
-                return !string.IsNullOrWhiteSpace(user.HashPassword);
+                return !string.IsNullOrWhiteSpace(user.PasswordHash);
             });
         }
 
         public  Task SetPasswordHashAsync(Usuario user, string passwordHash)
         {
-            user.HashPassword = passwordHash;
+            user.PasswordHash = passwordHash;
             return Task.FromResult<object>(null);
         }
 

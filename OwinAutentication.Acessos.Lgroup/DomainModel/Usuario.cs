@@ -26,8 +26,15 @@ namespace OwinAutentication.Acessos.Lgroup.DomainModel
         public string Cpf { get; set; }
         public int id { get; set; }
         public string UserName { get; set; }
-        public string HashPassword { get; set; }
+        public string PasswordHash { get; set; }
+        public string Email { get; set; }
 
-
+        public int Id
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
     }
 }
