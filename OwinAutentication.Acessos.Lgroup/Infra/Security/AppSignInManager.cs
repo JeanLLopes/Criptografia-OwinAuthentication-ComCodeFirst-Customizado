@@ -8,6 +8,7 @@ using Microsoft.AspNet.Identity.Owin;
 
 using OwinAutentication.Acessos.Lgroup.DomainModel;
 using Microsoft.AspNet.Identity;
+using System.Security.Claims;
 
 namespace OwinAutentication.Acessos.Lgroup.Infra.Security
 {
@@ -21,6 +22,19 @@ namespace OwinAutentication.Acessos.Lgroup.Infra.Security
         public AppSignInManager(IAuthenticationManager authenticationManager) 
             : base(new AppUserManager(), authenticationManager)
         {
+        }
+
+        //
+        public override async Task<ClaimsIdentity> CreateUserIdentityAsync(Usuario user)
+        {
+            ClaimsIdentity claimsIdentity = await base.CreateUserIdentityAsync(user);
+
+            // ESSA INFORMAÇÃO PODEMOS PEGAR DO BANCO
+            //PEGANDO O ADMINISTRADOR DO BANCO DE DADOS E ADICIONANDO AO USUARIO
+            claimsIdentity.AddClaim(new Claim(ClaimTypes.Role, "Administrador"));
+
+            return claimsIdentity;
+            
         }
     }
 }

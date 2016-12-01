@@ -92,21 +92,21 @@
     <Compile Include="Infra\Helpers\HashHelper.cs" />
     <Compile Include="Infra\Security\AppSignInManager.cs" />
     <Compile Include="Infra\Security\AppUserManager.cs" />
-    <Compile Include="Migrations\201611292220418_Initial.cs" />
-    <Compile Include="Migrations\201611292220418_Initial.Designer.cs">
-      <DependentUpon>201611292220418_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201612012203452_Inicial.cs" />
+    <Compile Include="Migrations\201612012203452_Inicial.Designer.cs">
+      <DependentUpon>201612012203452_Inicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611292220418_Initial.resx">
-      <DependentUpon>201611292220418_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201612012203452_Inicial.resx">
+      <DependentUpon>201612012203452_Inicial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -7,13 +7,13 @@ namespace OwinAutentication.Acessos.Lgroup.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class Initial : IMigrationMetadata
+    public sealed partial class Inicial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Initial));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Inicial));
         
         string IMigrationMetadata.Id
         {
-            get { return "201611292220418_Initial"; }
+            get { return "201612012203452_Inicial"; }
         }
         
         string IMigrationMetadata.Source

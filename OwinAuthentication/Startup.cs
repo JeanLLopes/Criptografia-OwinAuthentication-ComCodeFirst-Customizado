@@ -25,7 +25,7 @@ namespace OwinAuthentication
 
             //Todo Mundo!!!
             //Tem que se autenticar
-            GlobalFilters.Filters.Add(new AuthorizeAttribute());
+            //GlobalFilters.Filters.Add(new AuthorizeAttribute());
 
 
             //Estamos criando um middleware

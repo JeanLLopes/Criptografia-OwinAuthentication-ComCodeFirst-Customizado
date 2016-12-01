@@ -2,6 +2,7 @@
 using Microsoft.AspNet.Identity.EntityFramework;
 using OwinAutentication.Acessos.Lgroup.DomainModel;
 using OwinAutentication.Acessos.Lgroup.Infra.Data;
+using OwinAutentication.Acessos.Lgroup.Infra.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +29,7 @@ namespace OwinAutentication.Acessos.Lgroup.Infra.Security
 
 
 
-            this.PasswordHasher = null;
+            this.PasswordHasher = new CustomPasswordHash();
 
         }
     }

@@ -52,12 +52,11 @@ namespace OwinAutentication.Acessos.Lgroup.Infra.Data
             return _acessosContext.Usuarios.FindAsync(userId);
         }
 
-        public async Task<Usuario> FindByNameAsync(string userName)
+        public Task<Usuario> FindByNameAsync(string userName)
         {
-            return await Task.Run(() =>
-            {
-                return _acessosContext.Usuarios.Single(x => x.UserName.Equals(userName));
-            });
+            //#BUG ANALISAR
+            //NAO PODE SER SIGLE POIS O IDENTITY VAI VALIDAR SE EXISTE AQUI
+            return _acessosContext.Usuarios.SingleAsync(x => x.UserName.Equals(userName));
         }
 
         public async Task<string> GetPasswordHashAsync(Usuario user)

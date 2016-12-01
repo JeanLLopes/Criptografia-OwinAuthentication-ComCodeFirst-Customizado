@@ -17,7 +17,7 @@ namespace OwinAuthentication.Models
 
         [Required]
         [DataType(DataType.Password)]
-        [StringLength(6, ErrorMessage ="A senha deverá ter 6 digitos")]
+        [MinLength(8, ErrorMessage ="A senha deverá ter 8 digitos")]
         public string Password { get; set; }
 
         [Required]
